@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Johann Moreno - Desarrollador de Software Full Stack y Backend. Experiencia en Java, Spring Boot, JavaScript, React, APIs REST, seguridad y desarrollo de soluciones escalables."
+    />
+
+    <meta
+      name="keywords"
+      content="Johann Moreno, desarrollador de software, desarrollador Full Stack, desarrollador Backend, Java, Spring Boot, JavaScript, React, Colombia, Cartagena"
+    />
+
+    <meta name="author" content="Johann Moreno" />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta name="theme-color" content="#20c997" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Johann Moreno | Desarrollador de Software"
+    />
+
+    <meta
+      property="og:description"
+      content="Portafolio profesional de Johann Moreno, desarrollador de software Full Stack y Backend."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:image" content="assets/img/johann.jpg" />
+
+    <meta property="og:locale" content="es_CO" />
+
+    <title>Johann Moreno | Desarrollador de Software</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+
+    <!-- Preconnect Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- SEO estructurado -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Johann Moreno",
+        "jobTitle": "Desarrollador de Software Full Stack",
+        "email": "mailto:jdmoreno159@gmail.com",
+        "telephone": "+57 312 673 4941",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cartagena",
+          "addressCountry": "CO"
+        },
+        "knowsAbout": [
+          "Java",
+          "Spring Boot",
+          "JavaScript",
+          "React",
+          "HTML",
+          "CSS",
+          "Spring Security",
+          "JWT",
+          "APIs REST",
+          "Git",
+          "Bases de datos"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="header">
+      <div class="header-container">
+        <a href="#inicio" class="logo" aria-label="Johann Moreno - Inicio">
+          <span class="logo-icon">
+            <i data-lucide="cpu"></i>
+          </span>
+
+          <span class="logo-text"> JM </span>
+        </a>
+
+        <button
+          class="menu-button"
+          id="menuButton"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <i data-lucide="menu"></i>
+        </button>
+
+        <nav
+          class="navigation"
+          id="navigation"
+          aria-label="Navegación principal"
+        >
+          <a href="#inicio" class="nav-link active"> Inicio </a>
+
+          <a href="#sobre-mi" class="nav-link"> Sobre mí </a>
+
+          <a href="#habilidades" class="nav-link"> Habilidades </a>
+
+          <a href="#proyectos" class="nav-link"> Proyectos </a>
+
+          <a href="#formacion" class="nav-link"> Formación </a>
+
+          <a href="#contacto" class="nav-link"> Contacto </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- =========================================
+             HERO / INICIO
+        ========================================== -->
+
+      <section id="inicio" class="hero">
+        <div class="hero-background"></div>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <div class="hero-image-wrapper">
+            <div class="hero-image-ring">
+              <img
+                src="assets/img/fotoperfil.png"
+                alt="Johann Moreno - Desarrollador de Software"
+                class="hero-image"
+              />
+            </div>
+          </div>
+
+          <div class="hero-text">
+            <span class="hero-greeting"> Hola, soy </span>
+
+            <h1>Johann Moreno</h1>
+
+            <h2>Desarrollador de Software</h2>
+
+            <p>Full Stack & Backend Developer</p>
+          </div>
+
+          <!-- Redes -->
+
+          <div class="social-links" aria-label="Redes sociales">
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i data-lucide="linkedin"></i>
+            </a>
+
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i data-lucide="github"></i>
+            </a>
+
+            <a
+              href="https://wa.me/573126734941"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <i data-lucide="message-circle"></i>
+            </a>
+
+            <a href="mailto:jdmoreno159@gmail.com" aria-label="Enviar correo">
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+
+          <a href="#proyectos" class="hero-button">
+            Ver mis proyectos
+
+            <i data-lucide="arrow-down"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- =========================================
+             SOBRE MÍ
+        ========================================== -->
+
+      <section id="sobre-mi" class="section about-section">
+        <div class="section-container">
+          <div class="section-heading">
+            <span> Conóceme </span>
+
+            <h2>Sobre mí</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-content">
+              <p class="about-intro">
+                Soy <strong>Johann Moreno</strong>, desarrollador de software
+                con más de
+                <strong>3 años de experiencia</strong>
+                en desarrollo Full Stack y Backend.
+              </p>
+
+              <p>
+                Me especializo en la construcción de soluciones de software
+                escalables, optimización de sistemas, desarrollo de APIs y
+                creación de funcionalidades orientadas a resolver necesidades
+                reales de negocio.
+              </p>
+
+              <p>
+                Tengo experiencia trabajando con tecnologías como Java, Spring
+                Boot, JavaScript y React, además de implementar mecanismos de
+                seguridad, pruebas unitarias y mejoras de rendimiento.
+              </p>
+
+              <p>
+                Actualmente continúo fortaleciendo mi formación profesional en
+                Ingeniería de Software.
+              </p>
+            </div>
+
+            <div class="about-info">
+              <div class="info-card">
+                <div class="info-icon">
+                  <i data-lucide="code-2"></i>
+                </div>
+
+                <div>
+                  <span> Experiencia </span>
+
+                  <strong> +3 años </strong>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <i data-lucide="server"></i>
+                </div>
+
+                <div>
+                  <span> Especialidad </span>
+
+                  <strong> Full Stack / Backend </strong>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+
+                <div>
+                  <span> Ubicación </span>
+
+                  <strong> Cartagena, Colombia </strong>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="info-icon">
+                  <i data-lucide="graduation-cap"></i>
+                </div>
+
+                <div>
+                  <span> Formación </span>
+
+                  <strong> Ingeniería de Software </strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+             EXPERIENCIA
+        ========================================== -->
+
+      <section class="section experience-section">
+        <div class="section-container">
+          <div class="section-heading">
+            <span> Mi trayectoria </span>
+
+            <h2>Experiencia profesional</h2>
+          </div>
+
+          <div class="timeline">
+            <!-- Experiencia 1 -->
+
+            <article class="timeline-item">
+              <div class="timeline-dot"></div>
+
+              <div class="timeline-content">
+                <span class="timeline-date">
+                  Desarrollador Web Backend · Remoto
+                </span>
+
+                <h3>Linexperts Consultoría Empresarial</h3>
+
+                <ul>
+                  <li>
+                    Gestión de solicitudes e incidencias reportadas por
+                    clientes.
+                  </li>
+
+                  <li>
+                    Optimización de microservicios existentes para mejorar
+                    rendimiento y estabilidad.
+                  </li>
+
+                  <li>
+                    Análisis e implementación de Stored Procedures a partir de
+                    historias de usuario.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Experiencia 2 -->
+
+            <article class="timeline-item">
+              <div class="timeline-dot"></div>
+
+              <div class="timeline-content">
+                <span class="timeline-date">
+                  Desarrollador Web Full Stack · Remoto
+                </span>
+
+                <h3>Linexperts Consultoría Empresarial</h3>
+
+                <ul>
+                  <li>
+                    Desarrollo de soluciones de software ajustadas a
+                    especificaciones técnicas.
+                  </li>
+
+                  <li>Integración de bibliotecas y APIs.</li>
+
+                  <li>Desarrollo de funcionalidades end-to-end.</li>
+
+                  <li>
+                    Implementación de autenticación, autorización y protección
+                    de datos.
+                  </li>
+
+                  <li>Aplicación de metodologías de control de calidad.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+             HABILIDADES
+        ========================================== -->
+
+      <section id="habilidades" class="section skills-section">
+        <div class="section-container">
+          <div class="section-heading">
+            <span> Tecnologías </span>
+
+            <h2>Habilidades</h2>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i data-lucide="code"></i>
+              </div>
+
+              <h3>JavaScript</h3>
+
+              <p>Desarrollo Frontend y consumo de APIs.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i data-lucide="atom"></i>
+              </div>
+
+              <h3>React</h3>
+
+              <p>Construcción de interfaces modernas.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i data-lucide="coffee"></i>
+              </div>
+
+              <h3>Java</h3>
+
+              <p>Desarrollo de aplicaciones Backend.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i data-lucide="layers"></i>
+              </div>
+
+              <h3>Spring Boot</h3>
+
+              <p>APIs y aplicaciones empresariales.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i data-lucide="shield-check"></i>
+              </div>
+
+              <h3>Spring Security</h3>
+
+              <p>Seguridad y autenticación.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i data-lucide="key-round"></i>
+              </div>
+
+              <h3>JWT</h3>
+
+              <p>Autenticación basada en tokens.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i data-lucide="database"></i>
+              </div>
+
+              <h3>Bases de datos</h3>
+
+              <p>Stored Procedures y optimización.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i data-lucide="git-branch"></i>
+              </div>
+
+              <h3>Git</h3>
+
+              <p>Control de versiones y colaboración.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i data-lucide="globe"></i>
+              </div>
+
+              <h3>APIs REST</h3>
+
+              <p>Diseño y consumo de servicios.</p>
+            </article>
+
+            <article class="skill-card">
+              <div class="skill-icon">
+                <i data-lucide="layout"></i>
+              </div>
+
+              <h3>HTML & CSS</h3>
+
+              <p>Interfaces web responsive.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+             PROYECTOS - ESTILO NETFLIX
+        ========================================== -->
+
+      <section id="proyectos" class="section projects-section">
+        <div class="section-container projects-container">
+          <div class="section-heading projects-heading">
+            <span> Mi trabajo </span>
+
+            <h2>Proyectos</h2>
+          </div>
+
+          <div class="projects-carousel-wrapper">
+            <button
+              class="carousel-button carousel-prev"
+              id="prevProject"
+              aria-label="Proyecto anterior"
+            >
+              <i data-lucide="chevron-left"></i>
+            </button>
+
+            <div class="projects-carousel" id="projectsCarousel">
+              <!-- Proyecto 1 -->
+
+              <article class="project-card">
+                <img
+                  src="assets/img/proyecto-1.jpg"
+                  alt="Proyecto de desarrollo de software"
+                  loading="lazy"
+                />
+
+                <div class="project-overlay"></div>
+
+                <div class="project-content">
+                  <span class="project-category"> FULL STACK </span>
+
+                  <h3>Proyecto Full Stack</h3>
+
+                  <h4>Solución web empresarial</h4>
+
+                  <p>
+                    Aplicación web desarrollada utilizando tecnologías modernas
+                    para resolver necesidades específicas de negocio.
+                  </p>
+
+                  <div class="project-tags">
+                    <span> Java </span>
+
+                    <span> Spring Boot </span>
+
+                    <span> React </span>
+                  </div>
+
+                  <button class="project-button" type="button">
+                    Ver proyecto
+                    <i data-lucide="external-link"></i>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Proyecto 2 -->
+
+              <article class="project-card">
+                <img
+                  src="assets/img/proyecto-2.jpg"
+                  alt="Proyecto Backend"
+                  loading="lazy"
+                />
+
+                <div class="project-overlay"></div>
+
+                <div class="project-content">
+                  <span class="project-category"> BACKEND </span>
+
+                  <h3>API REST</h3>
+
+                  <h4>Arquitectura Backend</h4>
+
+                  <p>
+                    Servicio Backend enfocado en rendimiento, seguridad,
+                    escalabilidad y correcta separación de responsabilidades.
+                  </p>
+
+                  <div class="project-tags">
+                    <span> Java </span>
+
+                    <span> Spring Boot </span>
+
+                    <span> JWT </span>
+                  </div>
+
+                  <button class="project-button" type="button">
+                    Ver proyecto
+                    <i data-lucide="external-link"></i>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Proyecto 3 -->
+
+              <article class="project-card">
+                <img
+                  src="assets/img/proyecto-3.jpg"
+                  alt="Proyecto Frontend"
+                  loading="lazy"
+                />
+
+                <div class="project-overlay"></div>
+
+                <div class="project-content">
+                  <span class="project-category"> FRONTEND </span>
+
+                  <h3>Aplicación Web</h3>
+
+                  <h4>Interfaz responsive</h4>
+
+                  <p>
+                    Interfaz moderna, responsive y orientada a ofrecer una
+                    experiencia de usuario clara y eficiente.
+                  </p>
+
+                  <div class="project-tags">
+                    <span> React </span>
+
+                    <span> JavaScript </span>
+
+                    <span> CSS </span>
+                  </div>
+
+                  <button class="project-button" type="button">
+                    Ver proyecto
+                    <i data-lucide="external-link"></i>
+                  </button>
+                </div>
+              </article>
+
+              <!-- Proyecto 4 -->
+
+              <article class="project-card">
+                <img
+                  src="assets/img/proyecto-4.jpg"
+                  alt="Proyecto de software"
+                  loading="lazy"
+                />
+
+                <div class="project-overlay"></div>
+
+                <div class="project-content">
+                  <span class="project-category"> SOFTWARE </span>
+
+                  <h3>Proyecto personal</h3>
+
+                  <h4>Solución tecnológica</h4>
+
+                  <p>
+                    Proyecto orientado a aplicar conocimientos de desarrollo,
+                    arquitectura y buenas prácticas.
+                  </p>
+
+                  <div class="project-tags">
+                    <span> Git </span>
+
+                    <span> REST </span>
+
+                    <span> JavaScript </span>
+                  </div>
+
+                  <button class="project-button" type="button">
+                    Ver proyecto
+                    <i data-lucide="external-link"></i>
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <button
+              class="carousel-button carousel-next"
+              id="nextProject"
+              aria-label="Siguiente proyecto"
+            >
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+             EDUCACIÓN
+        ========================================== -->
+
+      <section id="formacion" class="section education-section">
+        <div class="section-container">
+          <div class="section-heading">
+            <span> Formación </span>
+
+            <h2>Educación</h2>
+          </div>
+
+          <div class="education-grid">
+            <article class="education-card">
+              <div class="education-icon">
+                <i data-lucide="graduation-cap"></i>
+              </div>
+
+              <div>
+                <span> 2024 — En curso </span>
+
+                <h3>Ingeniería de Software</h3>
+
+                <p>Universidad de Cartagena</p>
+              </div>
+            </article>
+
+            <article class="education-card">
+              <div class="education-icon">
+                <i data-lucide="book-open"></i>
+              </div>
+
+              <div>
+                <span> 2020 — 2022 </span>
+
+                <h3>
+                  Tecnólogo en Análisis y Desarrollo de Sistemas de Información
+                </h3>
+
+                <p>SENA</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================
+             CONTACTO
+        ========================================== -->
+
+      <section id="contacto" class="section contact-section">
+        <div class="contact-container">
+          <div class="contact-content">
+            <span class="contact-label"> ¿Trabajamos juntos? </span>
+
+            <h2>Hablemos de tu próximo proyecto</h2>
+
+            <p>
+              Si tienes una idea, proyecto o simplemente quieres hablar de
+              tecnología, puedes contactarme directamente.
+            </p>
+
+            <a
+              href="mailto:jdmoreno159@gmail.com?subject=Contacto%20desde%20mi%20portafolio"
+              class="contact-button"
+            >
+              Enviar un correo
+
+              <i data-lucide="mail"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div>
+          <strong> Johann Moreno </strong>
+
+          <p>Desarrollador de Software</p>
+        </div>
+
+        <div class="footer-social">
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i data-lucide="linkedin"></i>
+          </a>
+
+          <a
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i data-lucide="github"></i>
+          </a>
+
+          <a
+            href="https://wa.me/573126734941"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i data-lucide="message-circle"></i>
+          </a>
+
+          <a
+            href="mailto:jdmoreno159@gmail.com"
+            aria-label="Correo electrónico"
+          >
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+
+        <p class="copyright">
+          © <span id="currentYear"></span>
+          Johann Moreno. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
