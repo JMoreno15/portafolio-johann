@@ -9,7 +9,9 @@ lucide.createIcons();
 ========================================= */
 
 const menuButton = document.getElementById("menuButton");
+
 const navigation = document.getElementById("navigation");
+
 const navLinks = document.querySelectorAll(".nav-link");
 
 menuButton.addEventListener("click", () => {
@@ -79,6 +81,56 @@ const previousButton = document.getElementById("prevProject");
 
 const nextButton = document.getElementById("nextProject");
 
+const swipeHint = document.getElementById("swipeHint");
+
+let swipeHintHidden = false;
+
+/* =========================================
+   REINICIAR CARRUSEL AL IR A PROYECTOS
+========================================= */
+
+/*
+  Seleccionamos todos los enlaces que
+  llevan a #proyectos.
+
+  Esto incluye:
+
+  1. El botón "Proyectos" del menú
+  2. El botón "Ver mis proyectos" del Hero
+*/
+
+const projectsLinks = document.querySelectorAll('a[href="#proyectos"]');
+
+projectsLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    /*
+      Volvemos al primer proyecto.
+    */
+
+    projectsCarousel.scrollTo({
+      left: 0,
+      behavior: "instant",
+    });
+
+    /*
+      Reiniciamos el estado del mensaje
+      "Desliza para ver más".
+    */
+
+    swipeHintHidden = false;
+
+    /*
+      Volvemos a mostrar el mensaje.
+    */
+
+    swipeHint.classList.remove("hidden");
+  });
+});
+
+/* =========================================
+   CÁLCULO DEL DESPLAZAMIENTO
+========================================= */
+
 const getScrollAmount = () => {
   const card = projectsCarousel.querySelector(".project-card");
 
@@ -89,7 +141,9 @@ const getScrollAmount = () => {
   return card.offsetWidth + 20;
 };
 
-/* Proyecto anterior */
+/* =========================================
+   PROYECTO ANTERIOR
+========================================= */
 
 previousButton.addEventListener("click", () => {
   projectsCarousel.scrollBy({
@@ -98,7 +152,9 @@ previousButton.addEventListener("click", () => {
   });
 });
 
-/* Proyecto siguiente */
+/* =========================================
+   PROYECTO SIGUIENTE
+========================================= */
 
 nextButton.addEventListener("click", () => {
   projectsCarousel.scrollBy({
@@ -111,10 +167,6 @@ nextButton.addEventListener("click", () => {
    INDICACIÓN DE DESLIZAMIENTO EN MÓVIL
 ========================================= */
 
-const swipeHint = document.getElementById("swipeHint");
-
-let swipeHintHidden = false;
-
 projectsCarousel.addEventListener(
   "scroll",
   () => {
@@ -123,6 +175,7 @@ projectsCarousel.addEventListener(
       el carrusel horizontalmente, ocultamos
       la indicación.
     */
+
     if (projectsCarousel.scrollLeft > 5 && !swipeHintHidden) {
       swipeHintHidden = true;
 
@@ -181,13 +234,11 @@ projectsCarousel.addEventListener("mousemove", (event) => {
 /*
    IMPORTANTE:
 
-   Se eliminó el bloque TOUCH / SWIPE anterior.
+   Se mantiene el desplazamiento táctil
+   nativo del navegador.
 
-   En dispositivos táctiles ahora utilizamos
-   el desplazamiento horizontal NATIVO del navegador.
-
-   Esto evita que JavaScript compita con el
-   sistema táctil del navegador.
+   No agregamos JavaScript para touch/swipe,
+   evitando conflictos con el navegador.
 */
 
 /* =========================================
