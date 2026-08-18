@@ -791,6 +791,57 @@ ul {
   position: relative;
 }
 
+/* =========================================
+   INDICACIÓN DE DESLIZAMIENTO
+========================================= */
+
+.swipe-hint {
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  color: var(--green-light);
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  margin: -20px auto 12px;
+
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.swipe-hint svg {
+  width: 19px;
+  height: 19px;
+
+  animation: swipeHintMove 1.2s ease-in-out infinite;
+}
+
+.swipe-hint.hidden {
+  opacity: 0;
+  transform: translateX(-10px);
+  visibility: hidden;
+}
+
+@keyframes swipeHintMove {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-8px);
+  }
+}
+
 .projects-carousel {
   display: flex;
 
@@ -1323,6 +1374,14 @@ ul {
   /* =========================================
      PROJECT CAROUSEL - MOBILE
   ========================================= */
+
+  /*
+    Indicador de desplazamiento.
+    Solo aparece en dispositivos móviles.
+  */
+  .swipe-hint {
+    display: flex;
+  }
 
   .projects-carousel {
     /*

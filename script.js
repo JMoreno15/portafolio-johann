@@ -108,6 +108,33 @@ nextButton.addEventListener("click", () => {
 });
 
 /* =========================================
+   INDICACIÓN DE DESLIZAMIENTO EN MÓVIL
+========================================= */
+
+const swipeHint = document.getElementById("swipeHint");
+
+let swipeHintHidden = false;
+
+projectsCarousel.addEventListener(
+  "scroll",
+  () => {
+    /*
+      Si el usuario empieza a desplazar
+      el carrusel horizontalmente, ocultamos
+      la indicación.
+    */
+    if (projectsCarousel.scrollLeft > 5 && !swipeHintHidden) {
+      swipeHintHidden = true;
+
+      swipeHint.classList.add("hidden");
+    }
+  },
+  {
+    passive: true,
+  },
+);
+
+/* =========================================
    DRAG PARA PC
 ========================================= */
 
