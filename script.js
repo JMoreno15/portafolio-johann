@@ -89,12 +89,16 @@ const getScrollAmount = () => {
   return card.offsetWidth + 20;
 };
 
+/* Proyecto anterior */
+
 previousButton.addEventListener("click", () => {
   projectsCarousel.scrollBy({
     left: -getScrollAmount(),
     behavior: "smooth",
   });
 });
+
+/* Proyecto siguiente */
 
 nextButton.addEventListener("click", () => {
   projectsCarousel.scrollBy({
@@ -125,10 +129,14 @@ projectsCarousel.addEventListener("mousedown", (event) => {
 
 projectsCarousel.addEventListener("mouseleave", () => {
   isDragging = false;
+
+  projectsCarousel.classList.remove("dragging");
 });
 
 projectsCarousel.addEventListener("mouseup", () => {
   isDragging = false;
+
+  projectsCarousel.classList.remove("dragging");
 });
 
 projectsCarousel.addEventListener("mousemove", (event) => {
@@ -143,45 +151,17 @@ projectsCarousel.addEventListener("mousemove", (event) => {
   projectsCarousel.scrollLeft = scrollStart - distance;
 });
 
-/* =========================================
-   TOUCH / SWIPE
-========================================= */
+/*
+   IMPORTANTE:
 
-let touchStartX = 0;
+   Se eliminó el bloque TOUCH / SWIPE anterior.
 
-projectsCarousel.addEventListener(
-  "touchstart",
-  (event) => {
-    touchStartX = event.touches[0].clientX;
-  },
-  {
-    passive: true,
-  },
-);
+   En dispositivos táctiles ahora utilizamos
+   el desplazamiento horizontal NATIVO del navegador.
 
-projectsCarousel.addEventListener(
-  "touchmove",
-  (event) => {
-    if (!touchStartX) {
-      return;
-    }
-
-    const touchX = event.touches[0].clientX;
-
-    const difference = touchStartX - touchX;
-
-    projectsCarousel.scrollLeft += difference * 0.5;
-
-    touchStartX = touchX;
-  },
-  {
-    passive: true,
-  },
-);
-
-projectsCarousel.addEventListener("touchend", () => {
-  touchStartX = 0;
-});
+   Esto evita que JavaScript compita con el
+   sistema táctil del navegador.
+*/
 
 /* =========================================
    AÑO AUTOMÁTICO

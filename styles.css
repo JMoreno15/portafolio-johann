@@ -805,6 +805,13 @@ ul {
   cursor: grab;
 
   padding: 10px 0 30px;
+
+  /*
+    IMPORTANTE:
+    Permite que el navegador gestione
+    correctamente el desplazamiento táctil.
+  */
+  -webkit-overflow-scrolling: touch;
 }
 
 .projects-carousel::-webkit-scrollbar {
@@ -1313,10 +1320,77 @@ ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* =========================================
+     PROJECT CAROUSEL - MOBILE
+  ========================================= */
+
+  .projects-carousel {
+    /*
+      Desplazamiento táctil nativo.
+      El navegador controla el gesto.
+    */
+    overflow-x: auto;
+
+    /*
+      Desactiva el smooth scroll durante
+      el movimiento con el dedo.
+    */
+    scroll-behavior: auto;
+
+    /*
+      Permite que el navegador optimice
+      el desplazamiento táctil.
+    */
+    -webkit-overflow-scrolling: touch;
+
+    /*
+      Evita que el contenido se pueda
+      seleccionar accidentalmente mientras
+      se desliza.
+    */
+    user-select: none;
+
+    /*
+      Hace que el gesto horizontal se sienta
+      natural en dispositivos táctiles.
+    */
+    touch-action: pan-x;
+
+    /*
+      Hace que al soltar el dedo la tarjeta
+      se acomode automáticamente.
+    */
+    scroll-snap-type: x proximity;
+  }
+
   .project-card {
     flex-basis: 85vw;
 
     min-height: 500px;
+
+    /*
+      Cada tarjeta funciona como punto
+      de destino del desplazamiento.
+    */
+    scroll-snap-align: start;
+
+    /*
+      Evita que el navegador reduzca
+      accidentalmente el ancho de la tarjeta.
+    */
+    flex-shrink: 0;
+  }
+
+  /*
+    En dispositivos táctiles no necesitamos
+    el efecto de zoom al pasar el mouse.
+  */
+  .project-card:hover {
+    transform: none;
+  }
+
+  .project-card:hover > img {
+    transform: none;
   }
 
   .carousel-button {
@@ -1386,10 +1460,37 @@ ul {
     min-height: auto;
   }
 
+  /* =========================================
+     PROJECT CAROUSEL - SMALL MOBILE
+  ========================================= */
+
+  .projects-carousel {
+    gap: 15px;
+
+    /*
+      Mantiene el desplazamiento nativo
+      incluso en teléfonos pequeños.
+    */
+    scroll-behavior: auto;
+
+    scroll-snap-type: x proximity;
+
+    touch-action: pan-x;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
   .project-card {
+    /*
+      Un poco más pequeño que el viewport
+      para que se alcance a ver que existe
+      otro proyecto.
+    */
     flex-basis: 88vw;
 
     min-height: 470px;
+
+    scroll-snap-align: start;
   }
 
   .project-content {
